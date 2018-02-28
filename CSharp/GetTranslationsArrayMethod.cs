@@ -52,7 +52,7 @@ namespace Microsoft.Translator.Samples
             using (WebResponse response = request.GetResponse())
             using (Stream respStream = response.GetResponseStream())
             {
-                StreamReader rdr = new StreamReader(respStream, Encoding.ASCII);
+                StreamReader rdr = new StreamReader(respStream, Encoding.UTF8);
                 string strResponse = rdr.ReadToEnd();
                 XDocument doc = XDocument.Parse(@strResponse);
                 XNamespace ns = "http://schemas.datacontract.org/2004/07/Microsoft.MT.Web.Service.V2";
