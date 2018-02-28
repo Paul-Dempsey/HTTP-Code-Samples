@@ -26,7 +26,7 @@ namespace Microsoft.Translator.Samples
             using (WebResponse response = request.GetResponse())
             using (Stream respStream = response.GetResponseStream())
             {
-                StreamReader rdr = new StreamReader(respStream, System.Text.Encoding.ASCII);
+                StreamReader rdr = new StreamReader(respStream, Encoding.UTF8);
                 string strResponse = rdr.ReadToEnd();
 
                 Console.WriteLine("Available translations for source text '{0}' are", text);
